@@ -3,12 +3,12 @@ package com.egencia.dynamic.springconfig.model;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ComponentTwo {
-    private final String name = "Comp2";
+public class ProducerTemplate {
+    private final String name = "ProducerTemplate";
 
     @Override
     public String toString() {
-        return "ComponentTwo{" +
+        return "ProducerTemplate{" +
                 "name='" + name + '\'' +
                 '}';
     }
