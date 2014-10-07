@@ -1,0 +1,23 @@
+[
+    {
+        "sourceOfficeID" : "officeId#1",
+        "organizationID" : "orgId#1",
+        "originator" : "originator#1",
+        "password" : "pwd1",
+        "passwordLength" : "4"
+    },
+    {
+        "sourceOfficeID" : "officeId#2",
+        "organizationID" : "orgId#2",
+        "originator" : "originator#2",
+        "password" : "pwd2",
+        "passwordLength" : "4"
+    },
+    {
+        "sourceOfficeID" : "officeId#999",
+        "organizationID" : "orgId#999",
+        "originator" : "originator#999",
+        "password" : "pwd999",
+        "passwordLength" : "4"
+    }
+]

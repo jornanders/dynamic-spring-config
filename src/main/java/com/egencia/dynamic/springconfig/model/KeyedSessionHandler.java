@@ -1,8 +1,9 @@
 package com.egencia.dynamic.springconfig.model;
 
-import com.google.common.base.Preconditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.PostConstruct;
 import java.util.Map;
@@ -18,20 +19,17 @@ public class KeyedSessionHandler {
         this.sessionManagers = sessionManagers;
     }
 
-    public Map<String, SessionManager> getSessionManagers() {
-        return sessionManagers;
-    }
-
     @Override
     public String toString() {
-        return "KeyedSessionHandler{" +
-                "sessionManagers=" + sessionManagers +
+        return "\nKeyedSessionHandler{" +
+                "\nsessionManagers=\n" + StringUtils.collectionToDelimitedString(sessionManagers.entrySet(),
+                "\n")  +
                 '}';
     }
 
     @PostConstruct
     public void afterPropertiesSet() {
+        Assert.notEmpty(sessionManagers, "Map of SessionManager(s) must not be null or empty.");
         logger.debug(this.toString());
     }
-
 }

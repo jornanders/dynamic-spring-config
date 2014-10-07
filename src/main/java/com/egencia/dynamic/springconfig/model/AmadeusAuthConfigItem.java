@@ -8,6 +8,9 @@ public class AmadeusAuthConfigItem {
     private String password;
     private Integer passwordLength;
 
+    private AmadeusAuthConfigItem() {
+    }
+
     public AmadeusAuthConfigItem(String sourceOfficeID, String organizationID, String originator, String password, Integer passwordLength) {
         this.sourceOfficeID = sourceOfficeID;
         this.organizationID = organizationID;
